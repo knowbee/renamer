@@ -30,7 +30,7 @@ module.exports = {
           if (value.length) {
             return true;
           }
-          return 'Your command is empty';
+          return 'A number is required';
         }
       }
     ];
