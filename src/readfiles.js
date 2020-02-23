@@ -14,6 +14,7 @@ module.exports = {
             `${dirname}/${newname[0]}${answers.replacer}`,
             (err, data) => {
               if (err) return err;
+              console.log(`${color.green(`${dirname}/${newname[0]}${answers.match}`)} => ${color.magenta(`${dirname}/${newname[0]}${answers.replacer}`)}`)
             }
           );
         }
