@@ -1,7 +1,7 @@
 {
   "name": "@knowbee/rename",
   "version": "1.0.0",
-  "description": "rename files extension up to two level deep",
+  "description": "rename files with regex up to two level deep",
   "main": "index.js",
   "license": "MIT",
   "bin": {
