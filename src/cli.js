@@ -22,6 +22,16 @@ module.exports = {
           }
           return 'Your command is empty';
         }
+      },
+      {
+        name: 'level',
+        message: 'level (1 or 2): ',
+        validate(value) {
+          if (value.length) {
+            return true;
+          }
+          return 'Your command is empty';
+        }
       }
     ];
     return inquirer.prompt(questions);
