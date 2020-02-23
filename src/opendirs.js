@@ -2,7 +2,8 @@ const {renameFiles} = require("./readfiles");
 const { readdir, lstatSync, rename } = require("fs");
 const color = require("chalk");
 module.exports = {
-  opendirs : (answers, dirname) => {
+  opendirs : async (answers, dirname) => {
+   try {
     readdir(`${dirname}`, (err, data) => {
       if (err) throw err;
       data.map(f => {
@@ -27,6 +28,11 @@ module.exports = {
         }          
       });
     });
+    return true
+     
+   } catch (error) {
+     console.log(error)
+   }
   }
 }
 

@@ -1,8 +1,7 @@
 const { readdir, rename } = require("fs");
-
-// This function do all the magic of renaming the found files inside folder
-
+const color  = require('chalk')
 module.exports = {
+
   renameFiles : (dirname, answers) => {
     readdir(`${dirname}`, "utf8", (err, data) => {
       if (err) throw err;
