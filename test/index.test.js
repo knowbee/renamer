@@ -25,7 +25,7 @@ describe("@knowbee/rename", () => {
       })
     });
     it("renames sh files back to txt files", () => {
-      const answers = { 'match': '.txt', 'replacer':'.sh', 'level': 1 }
+      const answers = { 'match': '.sh', 'replacer':'.txt', 'level': 1 }
       opendirs(answers, dirname).then((res) =>{
         expect(res).to.be.true
       })
@@ -54,7 +54,7 @@ describe("@knowbee/rename", () => {
       })
     });
     it("renames sh files back to txt files", () => {
-      const answers = { 'match': '.txt', 'replacer':'.sh', 'level': 2 }
+      const answers = { 'match': '.sh', 'replacer':'.txt', 'level': 2 }
       opendirs(answers, dirname).then((res) =>{
         expect(res).to.be.true
       })
