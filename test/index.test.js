@@ -12,24 +12,8 @@ describe("@knowbee/rename", () => {
         expect(res).to.be.true
       })
     });
-    it("renames jsx files back to js files", () => {
-      const answers = { 'match': '.jsx', 'replacer':'.js', 'level': 1 }
-      opendirs(answers, dirname).then((res) =>{
-        expect(res).to.be.true
-      })
-    });
-    it("renames txt files to sh files", () => {
-      const answers = { 'match': '.txt', 'replacer':'.sh', 'level': 1 }
-      opendirs(answers, dirname).then((res) =>{
-        expect(res).to.be.true
-      })
-    });
-    it("renames sh files back to txt files", () => {
-      const answers = { 'match': '.sh', 'replacer':'.txt', 'level': 1 }
-      opendirs(answers, dirname).then((res) =>{
-        expect(res).to.be.true
-      })
-    });
+
+   
   });
   describe("renaming files level two deep", () => {
 
@@ -40,25 +24,6 @@ describe("@knowbee/rename", () => {
       })
     });
 
-    it("renames jsx files back to js files", () => {
-      const answers = { 'match': '.jsx', 'replacer':'.js', 'level': 2 }
-      opendirs(answers, dirname).then((res) =>{
-        expect(res).to.be.true
-      })
-    });
-
-    it("renames txt files to sh files", () => {
-      const answers = { 'match': '.txt', 'replacer':'.sh', 'level': 2 }
-      opendirs(answers, dirname).then((res) =>{
-        expect(res).to.be.true
-      })
-    });
-    it("renames sh files back to txt files", () => {
-      const answers = { 'match': '.sh', 'replacer':'.txt', 'level': 2 }
-      opendirs(answers, dirname).then((res) =>{
-        expect(res).to.be.true
-      })
-    });
    
   });
 });
