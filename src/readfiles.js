@@ -10,12 +10,12 @@ module.exports = {
           let newname
           if(answers.match.includes('.') && file.split(`${answers.match}`)[1] === ''){
             newname = file.replace(`${answers.match}`, `${answers.replacer}`);
-            console.log(newname)
           }
           else{
             if(!answers.match.includes('.') && file.split(`${answers.match}`)[0] === ''){
               newname = file.replace(`${answers.match}`, `${answers.replacer}`);
-              console.log(newname)
+            }else{
+              return
             }
           }
 
@@ -24,7 +24,7 @@ module.exports = {
               `${dirname}/${newname}`,
               (err, data) => {
                 if (err) return err;
-                console.log(`${color.green(`${dirname}/${file}`)} => ${color.magenta(`${dirname}/${newname}`)}`)
+                console.log(`${color.green(`${file}`)} => ${color.magenta(`${newname}`)}`)
               }
           );
         }
