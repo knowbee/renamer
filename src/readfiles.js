@@ -7,14 +7,14 @@ module.exports = {
       if (err) throw err;
       data.map(file => {
         if (file.match(`${answers.match}`)) {
-          const newname = file.split(`${answers.match}`, 1);
+          const newname = file.replace(`${answers.match}`, `${answers.replacer}`);
           return rename(
-            `${dirname}/${newname[0]}${answers.match}`,
-            `${dirname}/${newname[0]}${answers.replacer}`,
-            (err, data) => {
-              if (err) return err;
-              console.log(`${color.green(`${dirname}/${newname[0]}${answers.match}`)} => ${color.magenta(`${dirname}/${newname[0]}${answers.replacer}`)}`)
-            }
+            `${dirname}/${file}`,
+              `${dirname}/${newname}`,
+              (err, data) => {
+                if (err) return err;
+                console.log(`${color.green(`${dirname}/${file}`)} => ${color.magenta(`${dirname}/${newname}`)}`)
+              }
           );
         }
       });

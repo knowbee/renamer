@@ -16,15 +16,17 @@ module.exports = {
           renameFiles(`${dirname}/${f}/`, answers);
         }
         if(!type && +answers.level === 1){
-          const newname = f.split(`${answers.match}`, 1);
-          rename(
-            `${dirname}/${newname[0]}${answers.match}`,
-            `${dirname}/${newname[0]}${answers.replacer}`,
-            (err, data) => {
-              if (err) return err;
-              console.log(`${color.green(`${dirname}/${newname[0]}${answers.match}`)} => ${color.magenta(`${dirname}/${newname[0]}${answers.replacer}`)}`)
-            }
-          );
+          if (f.match(`${answers.match}`)) {
+            const newname = f.replace(`${answers.match}`, `${answers.replacer}`);
+            rename(
+              `${dirname}/${f}`,
+              `${dirname}/${newname}`,
+              (err, data) => {
+                if (err) return err;
+                console.log(`${color.green(`${dirname}/${f}`)} => ${color.magenta(`${dirname}/${newname}`)}`)
+              }
+            );
+          }
         }          
       });
     });
