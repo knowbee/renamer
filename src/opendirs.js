@@ -1,42 +1,24 @@
-const {renameFiles} = require("./readfiles");
-const { readdir, lstatSync, rename } = require("fs");
-const color = require("chalk");
+const {opener} = require("./readfiles");
+const { readdir, lstatSync } = require("fs");
+const {renamer} = require('./renamer')
+
+
 module.exports = {
   opendirs : async (answers, dirname) => {
    try {
     readdir(`${dirname}`, (err, data) => {
       if (err) throw err;
-      data.map(f => {
-        const type = lstatSync(`${dirname}/${f}`).isDirectory();
+      data.map(file => {
+        const type = lstatSync(`${dirname}/${file}`).isDirectory();
         if(isNaN(+answers.level)){
           console.log('level should be a number')
           process.exit(1)
         }
         if (type && +answers.level === 2) {
-          renameFiles(`${dirname}/${f}/`, answers);
+          opener(`${dirname}/${file}/`, answers);
         }
         if(!type && +answers.level === 1){
-          if (f.match(`${answers.match}`)) {
-            let newname
-            if(answers.match.includes('.') && f.split(`${answers.match}`)[1] === ''){
-              newname = f.replace(`${answers.match}`, `${answers.replacer}`);
-            }
-            else{
-              if(!answers.match.includes('.') && f.split(`${answers.match}`)[0] === ''){
-                newname = f.replace(`${answers.match}`, `${answers.replacer}`);
-              }else{
-                return
-              }
-            }
-            rename(
-              `${dirname}/${f}`,
-              `${dirname}/${newname}`,
-              (err, data) => {
-                if (err) return err;
-                console.log(`${color.green(`${f}`)} => ${color.magenta(`${newname}`)}`)
-              }
-            );
-          }
+          renamer(file, answers, dirname)
         }          
       });
     });
@@ -47,4 +29,3 @@ module.exports = {
    }
   }
 }
-
