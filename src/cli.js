@@ -5,7 +5,7 @@ module.exports = {
     const questions = [
       {
         name: 'match',
-        message: 'file extension to match: ',
+        message: 'matching keyword or file extension (must begin with a dot): ',
         validate(value) {
           if (value.length) {
             return true;
@@ -15,7 +15,7 @@ module.exports = {
       },
       {
         name: 'replacer',
-        message: 'file extension replacer: ',
+        message: 'new file name or extension replacer (must begin with a dot): ',
         validate(value) {
           if (value.length) {
             return true;

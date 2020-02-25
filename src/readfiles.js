@@ -7,7 +7,18 @@ module.exports = {
       if (err) throw err;
       data.map(file => {
         if (file.match(`${answers.match}`)) {
-          const newname = file.replace(`${answers.match}`, `${answers.replacer}`);
+          let newname
+          if(answers.match.includes('.') && file.split(`${answers.match}`)[1] === ''){
+            newname = file.replace(`${answers.match}`, `${answers.replacer}`);
+            console.log(newname)
+          }
+          else{
+            if(!answers.match.includes('.') && file.split(`${answers.match}`)[0] === ''){
+              newname = file.replace(`${answers.match}`, `${answers.replacer}`);
+              console.log(newname)
+            }
+          }
+
           return rename(
             `${dirname}/${file}`,
               `${dirname}/${newname}`,

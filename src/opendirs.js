@@ -17,7 +17,15 @@ module.exports = {
         }
         if(!type && +answers.level === 1){
           if (f.match(`${answers.match}`)) {
-            const newname = f.replace(`${answers.match}`, `${answers.replacer}`);
+            let newname
+            if(answers.match.includes('.') && f.split(`${answers.match}`)[1] === ''){
+              newname = f.replace(`${answers.match}`, `${answers.replacer}`);
+            }
+            else{
+              if(!answers.match.includes('.') && f.split(`${answers.match}`)[0] === ''){
+                newname = f.replace(`${answers.match}`, `${answers.replacer}`);
+              }
+            }
             rename(
               `${dirname}/${f}`,
               `${dirname}/${newname}`,
