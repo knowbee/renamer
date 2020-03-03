@@ -1,21 +1,21 @@
-const cli = require('commander');
+const cli = require("commander");
 
 const rename = new cli.Command();
 module.exports = {
   helper: () => {
     rename
-      .name('@knawbee/rename')
+      .name("@knawbee/rename")
       .description(
-        `it renames files with regex 
+        `mass rename files that matches different patterns of your choice
       `
       )
-      .version('1.0.0')
-      .option('--path, -p', 'provide a path to run rename')
+      .version("1.0.0")
+      .option("--path, -p", "provide a path to run rename")
       .parse(process.argv);
-    rename.on('--help', () => {
-      console.log('How to use rename:');
-      console.log('  $ rename --help');
-      console.log('  $ rename --path');
+    rename.on("--help", () => {
+      console.log("How to use rename:");
+      console.log("  $ rename --help");
+      console.log("  $ rename --path");
     });
   }
 };
