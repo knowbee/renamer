@@ -48,7 +48,7 @@ typings/
 
 # Optional npm cache directory
 .npm
-
+play
 # Optional eslint cache
 .eslintcache
 
