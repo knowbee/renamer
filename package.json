@@ -1,12 +1,12 @@
 {
-  "name": "@knowbee/rename",
+  "name": "@knowbee/renamer",
   "version": "0.0.3",
   "description": "rename multiple files by filenames,patterns or extensions",
   "main": "index.js",
-  "license": "MIT",
   "bin": {
-    "rename": "index.js"
+    "renamer": "index.js"
   },
+  "license": "MIT",
   "scripts": {
     "lint": "eslint .",
     "coverage": "nyc report --reporter=text-lcov | coveralls",

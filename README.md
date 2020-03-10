@@ -9,18 +9,18 @@ CLI tool for renaming files up to level two deep
 ### Installation
 
 ```
-npm install -g @knowbee/rename
+npm install -g @knowbee/renamer
 ```
 
 ```
-yarn global add @knowbee/rename
+yarn global add @knowbee/renamer
 ```
 
 ## Usage
 
 ::
 
-    Usage: rename [options]
+    Usage: renamer [options]
 
       rename multiple files with by filenames,patterns or extensions
 
