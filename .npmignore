@@ -3,3 +3,4 @@ CONTRIBUTOR_COVENANT.md
 test/
 .eslintrc
 .eslintignore
+.travis.yml
