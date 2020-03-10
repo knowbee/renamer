@@ -1,6 +1,6 @@
-# @knowbee/rename
+# @knowbee/renamer
 
-[![Build Status](https://travis-ci.com/knowbee/rename.svg?token=yN9jXnk59suszMqNsJJb&branch=master)](https://travis-ci.com/knowbee/rename)
+[![Build Status](https://travis-ci.com/knowbee/renamer.svg?token=yN9jXnk59suszMqNsJJb&branch=master)](https://travis-ci.com/knowbee/renamer)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
