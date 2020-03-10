@@ -6,7 +6,7 @@ module.exports = {
     rename
       .name("@knawbee/rename")
       .description(
-        `mass rename files that matches different patterns of your choice
+        `rename multiple files with by filenames,patterns or extensions
       `
       )
       .version("1.0.0")

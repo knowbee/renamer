@@ -22,7 +22,7 @@ yarn global add @knowbee/rename
 
     Usage: rename [options]
 
-      it renames files with regex
+      rename multiple files with by filenames,patterns or extensions
 
     Options:
 
