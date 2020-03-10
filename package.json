@@ -1,5 +1,5 @@
 {
-  "name": "@knowbee/rename",
+  "name": "@knowbee/renamer",
   "version": "1.0.0",
   "description": "rename multiple files by filenames,patterns or extensions",
   "main": "index.js",
@@ -21,10 +21,10 @@
     "ora": "^4.0.3"
   },
   "keywords": [
-    "git",
-    "check git",
-    "git repos",
-    "list git"
+    "rename",
+    "rename multiple files",
+    "rename files",
+    ""
   ],
   "repository": {
     "type": "git",
