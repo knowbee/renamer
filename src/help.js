@@ -9,7 +9,7 @@ module.exports = {
         `rename multiple files with by filenames,patterns or extensions
       `
       )
-      .version("1.0.2")
+      .version("1.0.3")
       .option("--path, -p", "provide a path to run renamer")
       .parse(process.argv);
     renamer.on("--help", () => {
