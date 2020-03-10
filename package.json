@@ -5,7 +5,7 @@
   "main": "index.js",
   "license": "MIT",
   "bin": {
-    "rename": "./index.js"
+    "rename": "index.js"
   },
   "scripts": {
     "lint": "eslint .",
