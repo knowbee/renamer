@@ -28,12 +28,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/knowbee/rename.git"
+    "url": "git+https://github.com/knowbee/renamer.git"
   },
   "bugs": {
-    "url": "https://github.com/knowbee/rename/issues"
+    "url": "https://github.com/knowbee/renamer/issues"
   },
-  "homepage": "https://github.com/knowbee/rename#readme",
+  "homepage": "https://github.com/knowbee/renamer#readme",
   "devDependencies": {
     "chai": "^4.2.0",
     "coveralls": "^3.0.9",
