@@ -1,6 +1,6 @@
 {
   "name": "@knowbee/renamer",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "rename multiple files by filenames,patterns or extensions",
   "main": "index.js",
   "bin": {
