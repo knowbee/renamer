@@ -1,12 +1,12 @@
 #! /usr/bin/env node
 
 const fs = require("fs");
-const { basename } = require("path");
 
 const { askCommands } = require("./src/cli");
 const { opendirs } = require("./src/opendirs");
-
+const { helper } = require("./src/help");
 // check to see if required arguments are given
+helper();
 if (process.argv.length < 3) {
   console.error(`Usage: rename --path <Path Name>`);
   process.exit(1);
