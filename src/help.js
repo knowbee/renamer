@@ -4,7 +4,7 @@ const rename = new cli.Command();
 module.exports = {
   helper: () => {
     rename
-      .name("@knowbee/renamer")
+      .name("@knowbee/rename")
       .description(
         `rename multiple files with by filenames,patterns or extensions
       `
