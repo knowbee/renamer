@@ -15,7 +15,7 @@ module.exports = {
     renamer.on("--help", () => {
       console.log("How to use renamer:");
       console.log("  $ rename --help");
-      console.log("  $ rename --path");
+      console.log("  $ rename --path .");
     });
   }
 };

@@ -30,6 +30,9 @@ yarn global add @knowbee/renamer
       --path,     -p            provide a path to run rename
       -h,         --help        output usage information
 
+    Example:
+      renamer --path .
+
 ## Contribution
 
 - Please before making a PR, read first this [Contributing Guideline](./CONTRIBUTING.md)
