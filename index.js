@@ -20,7 +20,7 @@ process.argv.slice(2).forEach(function(cmd) {
         });
       } else {
         console.log("");
-        console.log("  $ rename --help");
+        console.log("  $ renamer --help");
         process.exit();
       }
     } catch (error) {
