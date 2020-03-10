@@ -1,6 +1,6 @@
 {
   "name": "@knowbee/rename",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "rename multiple files by filenames,patterns or extensions",
   "main": "index.js",
   "license": "MIT",
