@@ -42,3 +42,4 @@ yarn global add @knowbee/renamer
 MIT
 
 ## Author
+Igwaneza Bruce
